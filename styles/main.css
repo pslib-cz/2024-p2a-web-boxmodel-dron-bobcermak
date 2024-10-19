@@ -15,6 +15,7 @@
         font-family: "Open Sans", sans-serif;
         color: var(--black);
         font-weight: 400;
+        scroll-behavior: smooth;
     }
     .page__logo::before {
         content: "";
