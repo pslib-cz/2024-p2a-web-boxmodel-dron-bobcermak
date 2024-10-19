@@ -76,7 +76,7 @@
    }
 
    .picture-box {
-    margin: 0;
+    margin: 0; /*figure -> definovat margin*/
    }
 
    .picture-box__figcaption {
@@ -140,5 +140,89 @@
     padding: 1em;
     max-width: 24em;
     display: inline-block;
+   }
+
+   .advertisement {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    height: 18em;
+    background-color: var(--gray, gray);
+    color: var(--light, white);
+   }
+
+   .advertisement h2 {
+    display: block;
+    height: 0em; /*definovat výšku*/
+    font-size: clamp(.5em, 5vw + .5em, 3em);
+    margin-top: 1em;
+   }
+
+   .advertisement h2 span {
+    font-size: 2em;
+   }
+
+   .advertisement p {
+    display: block; 
+    padding: 4em 0em 0em;
+   }
+
+   .advertisement a {
+    display: inline-block;
+   }
+
+   /*Main - 3*/
+
+   .text-h2 {
+    font-weight: 720;
+   }
+
+   .figure-fix {
+    margin: 0;
+   }
+
+   .gallery-img-1 {
+    display: block;
+    width: 100%;
+   }
+
+   .img__container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 1em;
+    margin-top: 1em;
+   }
+   
+   .gallery-img-2-3 {
+    width: 100%;
+   }
+
+   /*Footer*/
+
+   .page__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray, gray);
+    border: 2px solid var(--gray, gray);
+    height: 4.5em;
+    margin-top: 5em;
+    margin-bottom: 0;
+   }
+
+   .page__footer a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--light, white);
+   }
+
+   /*Gallery - responsive*/
+   
+   @media screen and (min-width: 1000px) {
+    .gallery-img-2-3 {
+        width: 29.5em;
+    }
    }
 }
