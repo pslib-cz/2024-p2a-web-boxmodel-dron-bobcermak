@@ -182,11 +182,6 @@
     margin: 0;
    }
 
-   .gallery-img-1 {
-    display: block;
-    width: 100%;
-   }
-
    .img__container {
     display: flex; 
     justify-content: space-between; 
@@ -221,7 +216,7 @@
 
    /*Gallery - responsive*/
    
-   @media screen and (min-width: 1000px) {
+   @media screen and (min-width: 992px) {
     .gallery-img-2-3 {
         width: 29.5em;
     }
