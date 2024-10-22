@@ -184,8 +184,7 @@
 
    .img__container {
     display: flex; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    justify-content: space-between;  
     gap: 1em;
     margin-top: 1em;
    }
@@ -216,9 +215,9 @@
 
    /*Gallery - responsive*/
    
-   @media screen and (min-width: 992px) {
-    .gallery-img-2-3 {
-        width: 29.5em;
+   @media screen and (max-width: 600px) {
+    .img__container {
+        flex-wrap: wrap;
     }
    }
 }
