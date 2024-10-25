@@ -186,6 +186,7 @@
    .gallery {
     --indent: 0.5em; /*pouze hodnoty*/
     margin: calc(-1 * var(--indent));
+    line-height: 0;
    }
 
    .gallery__item { /*nastavit display: block*/
@@ -209,20 +210,26 @@
    /*Footer*/
 
    .page__footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     background-color: var(--gray, gray);
     border: 2px solid var(--gray, gray);
     height: 4.5em;
     margin-top: 5em;
     margin-bottom: 0;
+    text-align: center; /*text - align*/
    }
 
    .page__footer a {
-    display: block;
+    display: inline-block;
+    margin-top: 0.5em;
     padding: 1em;
     text-decoration: none;
     color: var(--light, white);
+    transition: .5s all;
+   }
+
+   .page__footer a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: .01em;
    }
 }
