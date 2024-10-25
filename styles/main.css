@@ -70,6 +70,10 @@
     color: var(--light, white); /*pokud není definovaná barva - light -> bude white*/
    }
 
+   .page__section {
+    padding: 1em;
+   }
+
    .page__content {
     padding: 1em;
     max-width: 960px;
@@ -175,22 +179,31 @@
    /*Main - 3*/
 
    .text-h2 {
+    margin-top: -0.8em; /*margin lze dat do (-)*/
     font-weight: 720;
    }
 
-   .figure-fix {
-    margin: 0;
+   .gallery {
+    --indent: 0.5em; /*pouze hodnoty*/
+    margin: calc(-1 * var(--indent));
    }
 
-   .img__container {
-    display: flex; 
-    justify-content: space-between;  
-    gap: 1em;
-    margin-top: 1em;
+   .gallery__item { /*nastavit display: block*/
+    display: inline-block;
+    margin: var(--indent);
    }
+
+   /*Gallery - responsive*/
    
-   .gallery-img-2-3 {
-    width: 100%;
+   @media screen and (min-width: 768px) {
+    .gallery__item {
+        display: inline-block;
+        width: calc(50% - 2 * var(--indent));
+    }
+
+    .gallery__item--100w {
+        width: calc(100% - 2 * var(--indent));
+    }
    }
 
    /*Footer*/
@@ -211,13 +224,5 @@
     padding: 1em;
     text-decoration: none;
     color: var(--light, white);
-   }
-
-   /*Gallery - responsive*/
-   
-   @media screen and (max-width: 600px) {
-    .img__container {
-        flex-wrap: wrap;
-    }
    }
 }
